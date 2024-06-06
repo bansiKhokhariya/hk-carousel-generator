@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nxt.hkapps.in
+
+# Sitemaps
+Sitemap: https://nxt.hkapps.in/sitemap.xml
