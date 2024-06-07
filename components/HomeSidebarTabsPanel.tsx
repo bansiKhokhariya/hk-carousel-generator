@@ -58,9 +58,9 @@ const HomeSidebarTabsPanel = () => {
     return (
         <>
             {/* <div className={cn("h-full flex flex-1", className)}> */}
-            <aside className="h-full w-full shrink-0 md:sticky md:block border-r">
-                <SidebarTabsPanel />
-            </aside>
+            {/* <aside className="h-full w-full shrink-0 md:sticky md:block border-r"> */}
+            <SidebarTabsPanel />
+            {/* </aside> */}
             {/* </div> */}
         </>
 
@@ -99,8 +99,8 @@ export function SidebarTabsPanel() {
             }}
             className="flex-1 h-full p-0"
         >
-            <div className="flex flex-col" style={{ height: "670px" }}>
-                <ScrollArea className=" border-b bg-muted">
+            <div className="flex flex-col w-full lg:h-[670px] sm:h-[full]">
+                <ScrollArea className="border-b bg-muted">
                     <TabsList className="grid grid-cols-4 gap-2 h-20 rounded-none">
                         <HorizontalTabTriggerButton tabInfo={ALL_FORMS.brand} />
                         <HorizontalTabTriggerButton tabInfo={ALL_FORMS.theme} />
@@ -108,7 +108,7 @@ export function SidebarTabsPanel() {
                         <HorizontalTabTriggerButton tabInfo={ALL_FORMS.pageNumber} />
                     </TabsList>
                 </ScrollArea>
-                <div className="p-2 w-[320px] ">
+                <div className="p-2 lg:w-[320px] sm:w-full">
                     {/* // TODO Should be in a ScrollArea but it does not scroll */}
                     <TabsContent
                         value={ALL_FORMS.brand.value}
