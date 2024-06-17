@@ -41,7 +41,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
     if (access_token) {
       const cookieStore = cookies()
       cookieStore.set('linkedin_access_token', access_token);
-      return NextResponse.redirect('http://localhost:3000/page-linkedin');
+      return NextResponse.redirect('https://hk-carousel-generator.vercel.app/page-linkedin');
     }
     return NextResponse.json({ access_token });
   } catch (error) {
