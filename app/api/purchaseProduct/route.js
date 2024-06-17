@@ -53,13 +53,3 @@ export async function POST(req) {
     return new Response(JSON.stringify({ message: "An error occurred" }), { status: 500 });
   }
 }
-
-// export async function GET(req) {
-//   try {
-//     const response = await lemonSqueezyApiInstance.get(`/products`);
-//     return response.data;
-//   } catch (error) {
-//     console.error("Error fetching product details:", error);
-//     throw error;
-//   }
-// }
