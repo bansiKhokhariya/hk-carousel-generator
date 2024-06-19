@@ -159,7 +159,7 @@ const FAQ = () => {
     //   </div>
     // </section>
 
-    <section className="mt-8" id="faq">
+    <section className="p-8 bg-muted" id="faq">
       <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-center">Frequently Asked Questions</h2>
       <h3 className="text-xl lg:text-2xl font-semibold mb-8 text-center">Ask everything you need to know about our products and services</h3>
       <div className="container">

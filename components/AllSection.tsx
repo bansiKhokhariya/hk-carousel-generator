@@ -121,8 +121,7 @@ const AllSection = () => {
 
     return (
         <>
-
-            <div className="bg-muted">
+            <div className="">
                 <div className="container px-8 py-8">
                     <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-center">How to create good LinkedIn carousels?</h2>
                     <h3 className="text-xl lg:text-2xl font-semibold mb-8 text-center">Content and copywriting tips</h3>
@@ -133,7 +132,7 @@ const AllSection = () => {
                     </div>
                 </div>
             </div>
-            <div className="">
+            <div className="bg-muted">
                 <div className="container px-8 py-8">
                     <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-center">Why You Should Post LinkedIn Carousels</h2>
                     <div className="flex flex-wrap -m-3">
@@ -143,7 +142,7 @@ const AllSection = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-muted">
+            <div className="">
                 <div className="container px-8 py-8">
                     <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-center">What Are the Best Practices for LinkedIn Carousels?</h2>
                     <div className="flex flex-wrap -m-3">

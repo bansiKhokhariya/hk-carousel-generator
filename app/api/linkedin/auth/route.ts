@@ -37,11 +37,10 @@ export async function GET(req: NextRequest, res: NextResponse) {
       }
     });
     const { access_token } = response.data;
-    console.log(access_token);
     if (access_token) {
       const cookieStore = cookies()
       cookieStore.set('linkedin_access_token', access_token);
-      return NextResponse.redirect('https://hk-carousel-generator.vercel.app/page-linkedin');
+      return NextResponse.redirect(process.env.NEXT_PUBLIC_APP_URL);
     }
     return NextResponse.json({ access_token });
   } catch (error) {

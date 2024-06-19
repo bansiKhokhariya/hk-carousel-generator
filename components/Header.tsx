@@ -178,8 +178,8 @@ const Header = () => {
     //   </div>
     // </header>
 
-    <header className="bg-muted">
-      <nav className="bg-muted mx-auto border-b">
+    <header className="">
+      <nav className="mx-auto border-b">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="flex lg:flex-1">
             <Link

@@ -31,7 +31,7 @@ const ButtonSignin = ({
     return (
       <Link
         href={config.auth.callbackUrl}
-        className={`btn bg-blue-100 hover:bg-blue-200`}
+        className={`btn bg-muted`}
       >
         {session.user?.image ? (
           <img
@@ -54,7 +54,7 @@ const ButtonSignin = ({
 
   return (
     <button
-      className={`btn btn bg-blue-100 hover:bg-blue-200`}
+      className={`btn btn bg-muted`}
       onClick={handleClick}
     >
       {text}

@@ -54,6 +54,7 @@ import { Suspense } from 'react'
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AllSection from "@/components/AllSection";
+import PageLinkedin from "@/components/PageLinkedin";
 import Carousel from "@/components/Carousel";
 import Problem from "@/components/Problem";
 import FeaturesAccordion from "@/components/FeaturesAccordion";
@@ -76,6 +77,8 @@ export default function Home() {
         <DocumentProvider>
           <Carousel />
         </DocumentProvider>
+        <PageLinkedin />
+
         <AllSection />
         <FAQ />
         {/* <Problem />
