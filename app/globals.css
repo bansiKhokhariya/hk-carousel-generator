@@ -83,12 +83,19 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
 /* HTML2canvas extra padding in text https://github.com/niklasvh/html2canvas/issues/2829 */
-body > div:last-child > span + img {
+body>div:last-child>span+img {
   display: inline !important;
+}
+
+@media (max-width : 500px) {
+  .preview {
+    width: 100%;
+  }
 }

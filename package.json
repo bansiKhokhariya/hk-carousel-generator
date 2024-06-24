@@ -85,6 +85,7 @@
     "react-use": "^17.5.0",
     "rsuite": "^5.64.1",
     "stripe": "^13.11.0",
+    "styled-components": "^6.1.11",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "tsx": "^4.11.0",

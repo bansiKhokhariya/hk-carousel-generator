@@ -11,8 +11,6 @@ import { MainNav } from "./main-nav";
 
 export default function Editor() {
   const { componentRef, handlePrint, isPrinting } = useComponentPrinter();
-
-  console.log("componentRef",componentRef);
   
   return (
     <RefProvider myRef={componentRef}>

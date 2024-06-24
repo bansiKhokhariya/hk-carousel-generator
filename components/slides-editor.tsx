@@ -49,7 +49,7 @@ export function SlidesEditor({ }: SlidesEditorProps) {
   }, [setStatus]);
 
   useEffect(() => {
-    if (!session?.user) {
+    if (session?.user) {
       setIsLogin(session?.user);
     }
   }, [session]);

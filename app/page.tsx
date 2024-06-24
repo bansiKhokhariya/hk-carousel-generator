@@ -78,7 +78,6 @@ export default function Home() {
           <Carousel />
         </DocumentProvider>
         <PageLinkedin />
-
         <AllSection />
         <FAQ />
         {/* <Problem />

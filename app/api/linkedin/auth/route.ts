@@ -40,7 +40,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
     if (access_token) {
       const cookieStore = cookies()
       cookieStore.set('linkedin_access_token', access_token);
-      return NextResponse.redirect(process.env.NEXT_PUBLIC_APP_URL);
+      return NextResponse.redirect(`${process.env.NEXT_PUBLIC_APP_URL}/post-generator`);
     }
     return NextResponse.json({ access_token });
   } catch (error) {

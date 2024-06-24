@@ -118,7 +118,6 @@ const Card: React.FC<CardProps> = ({ title, description, index }) => (
 );
 
 const AllSection = () => {
-
     return (
         <>
             <div className="">
@@ -134,7 +133,7 @@ const AllSection = () => {
             </div>
             <div className="bg-muted">
                 <div className="container px-8 py-8">
-                    <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-center">Why You Should Post LinkedIn Carousels</h2>
+                    <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-center">Why You Should Post LinkedIn Carousels?</h2>
                     <div className="flex flex-wrap -m-3">
                         {whyPostContent.map((item, index) => (
                             <Card key={index} index={index} title={item.title} description={item.description} />

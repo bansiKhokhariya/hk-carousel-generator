@@ -33,7 +33,6 @@ import { ReactNode, useEffect, useState } from "react";
 import { buttonVariants } from "./ui/button";
 import { ScrollBar } from "./ui/scroll-area";
 import { useSelectionContext } from "@/libs/providers/selection-context";
-import { useFieldsFileImporter } from "@/libs/hooks/use-fields-file-importer";
 import { set } from "zod";
 import { StyleMenu } from "@/components/style-menu";
 import { useFormContext } from "react-hook-form";
