@@ -69,8 +69,6 @@ const PostGenerator = () => {
         );
     };
 
-
-
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
 
@@ -100,7 +98,6 @@ const PostGenerator = () => {
     const isActiveTab = (tabName: string) => {
         return activeTab === tabName;
     };
-
 
     const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         setPostText(e.target.value);
@@ -160,7 +157,6 @@ const PostGenerator = () => {
         setPostFiles(postFiles.filter((_, i) => i !== index));
     };
 
-
     return (
         <>
             <RefProvider myRef={componentRef}>
@@ -172,8 +168,7 @@ const PostGenerator = () => {
                     />
                 </div>
             </RefProvider>
-
-            <div className='bg-muted flex flex-col gap-10 items-center justify-center p-8 w-full '>
+            <div className='bg-muted flex flex-col gap-10 items-center justify-center p-2 sm:p-8 w-full '>
                 <div className="flex flex-col lg:flex-row gap-5 w-full">
                     <div className='w-full h-full flex flex-col gap-5'>
                         <div className={`p-4 bg-white shadow-lg rounded-md w-full h-full`}>
@@ -194,7 +189,7 @@ const PostGenerator = () => {
                                         onChange={(e: ChangeEvent<HTMLInputElement>) => setKeyword(e.target.value)} className="shadow appearance-none border rounded p-2 w-full text-gray-700 leading-tight focus:outline-none focus:border-blue-500" type="text" placeholder="Enter your Keywords" />
                                 </div>
                                 <div className="flex flex-col sm:flex-row gap-6 ">
-                                    <div className='w-1/2'>
+                                    <div className='w-full sm:w-1/2'>
                                         <label htmlFor="language" className="block text-gray-700 text-lg font-bold mb-1">
                                             Language
                                         </label>
@@ -212,7 +207,7 @@ const PostGenerator = () => {
                                             <option value="Portuguese">Portuguese</option>
                                         </select>
                                     </div>
-                                    <div className='w-1/2'>
+                                    <div className=' w-full sm:w-1/2'>
                                         <label htmlFor="tone" className="block text-gray-700 text-lg font-bold mb-1">
                                             Tone
                                         </label>
@@ -234,7 +229,7 @@ const PostGenerator = () => {
                                         </select>
                                     </div>
                                 </div>
-                                <div className="flex justify-end items-center">
+                                <div className="flex justify-start mt-2 sm:justify-end items-center">
                                     <button type="submit" onClick={() => setIsAI(true)} className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
                                         {loaderAI
                                             ?
@@ -252,7 +247,7 @@ const PostGenerator = () => {
                                 </div>
                             </form>
                         </div>
-                        <div className='bg-white p-4 w-full'>
+                        <div className='p-4 bg-white shadow-lg rounded-md w-full h-full'>
                             <h1 className="mb-4 text-2xl font-bold  text-gray-900 lg:text-3xl ">Publish Post</h1>
                             <div className='mb-4'>
                                 <textarea
@@ -292,7 +287,7 @@ const PostGenerator = () => {
                                 )}
                             </div>
 
-                            <div className='flex justify-end items-center'>
+                            <div className='flex justify-start mt-2 sm:justify-end items-center'>
                                 {!profile ? (
                                     <button type="submit" onClick={handleAuth} className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300  font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Connect Linkedin</button>
                                 ) : (
@@ -314,10 +309,9 @@ const PostGenerator = () => {
                             </div>
                         </div>
                     </div>
-
                     <div className='flex justify-start items-center gap-2 flex-col  h-full'>
-                        <div>
-                            <button className={`btn btn-sm hover:bg-blue-400 ${isActiveTab('desktop') ? 'bg-blue-400' : 'bg-blue-200'}`} onClick={() => handleTabChange('desktop')}>Desktop view</button>
+                        <div className='hidden sm:block'>
+                            <button className={`btn btn-sm hover:bg-blue-400  ${isActiveTab('desktop') ? 'bg-blue-400' : 'bg-blue-200'}`} onClick={() => handleTabChange('desktop')}>Desktop view</button>
                             <button className={`btn btn-sm hover:bg-blue-400 ${isActiveTab('mobile') ? 'bg-blue-400' : 'bg-blue-200'}`} onClick={() => handleTabChange('mobile')}>Mobile view</button>
                         </div>
                         <div className={`preview ${isActiveTab('desktop') ? 'w-[522px]' : 'w-[430px]'}`}>
@@ -377,19 +371,19 @@ const PostGenerator = () => {
                                 </div>
                                 <div className="p-4 border-t border-gray-200 flex justify-around text-gray-500 text-sm">
                                     <div className="flex items-center gap-1">
-                                        <img className='w-8 h-8' src="https://www.citypng.com/public/uploads/preview/hd-black-thumbs-up-like-icon-png-701751695035844kdxuys3ffy.png" alt="" />
+                                        <img className='w-4 h-4 sm:w-8 sm:h-8' src="https://www.citypng.com/public/uploads/preview/hd-black-thumbs-up-like-icon-png-701751695035844kdxuys3ffy.png" alt="" />
                                         <span>Like</span>
                                     </div>
                                     <div className="flex items-center gap-1">
-                                        <img className='w-8 h-8' src="https://www.pngall.com/wp-content/uploads/8/Comment-Transparent.png" alt="" />
+                                        <img className='w-4 h-4 sm:w-8 sm:h-8' src="https://www.pngall.com/wp-content/uploads/8/Comment-Transparent.png" alt="" />
                                         <span>Comment</span>
                                     </div>
                                     <div className="flex items-center gap-1">
-                                        <img className='w-6 h-6' src="https://www.pikpng.com/pngl/b/78-782135_share-png-share-icon-free-download-clipart.png" alt="" />
+                                        <img className='w-3 h-3 sm:w-6 sm:h-6' src="https://www.pikpng.com/pngl/b/78-782135_share-png-share-icon-free-download-clipart.png" alt="" />
                                         <span>Share</span>
                                     </div>
                                     <div className="flex items-center gap-1">
-                                        <img className='w-6 h-6' src="https://www.pngall.com/wp-content/uploads/12/Save-Bookmark-PNG-Images.png" alt="" />
+                                        <img className='w-4 h-4 sm:w-8 sm:h-8' src="https://www.pngall.com/wp-content/uploads/12/Save-Bookmark-PNG-Images.png" alt="" />
                                         <span>Save</span>
                                     </div>
                                 </div>
@@ -397,11 +391,9 @@ const PostGenerator = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
         </>
     );
 };
 
 export default PostGenerator;
-
